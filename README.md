@@ -68,7 +68,7 @@ The dataset used in this project contains wildfire records with features such as
 
 ---
 
-### 🧠 Add Feature Description Table (Optional)
+### 🧠 Add Feature Description Table 
 
 ```markdown
 | Feature       | Description                        |
