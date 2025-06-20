@@ -16,6 +16,6 @@
 
 ## 📂 Repository Structure
 📁 Final_Distributed_ML_using_H2O Framework.ipynb # Complete code notebook
-📁 📊 Project Report_ Predictive Modeling using H2O.ai.pdf # Final report
+📁 📊 Project Report: Predictive Modeling using H2O.ai.pdf # Final report
 📁 README.md 
 
