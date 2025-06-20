@@ -54,3 +54,42 @@ This project uses **two physical machines** connected on a private network.
 📎 **View Full Cluster Setup Guide**:  
 🔗 [kananpandit02/h2o_cluster_setup](https://github.com/kananpandit02/h2o_cluster_setup)
 
+
+
+---
+
+## 📦 Dataset
+
+The dataset used in this project contains wildfire records with features such as:
+
+- Latitude & Longitude
+- Brightness
+- Scan & Track
+- Satellite Type
+- Fire Radiative Power (FRP)
+- Confidence (Target - Multiclass: Low, Medium, High)
+
+It was loaded using `h2o.import_file()` and split into training, validation, and test sets using `H2OFrame.split_frame()`.
+
+> ⚠️ Due to size/licensing, the dataset is not included in this repository. Please contact the author or refer to public wildfire datasets like [NASA FIRMS](https://firms.modaps.eosdis.nasa.gov/) or [Kaggle wildfire datasets](https://www.kaggle.com/datasets) to explore similar data.
+
+---
+
+## 📈 Model Performance
+
+| Metric       | Value   |
+|--------------|---------|
+| AUC          | 0.948   |
+| RMSE         | 0.135   |
+| Accuracy     | 97.75%  |
+| Precision    | 97.5%   |
+| Recall       | 98.0%   |
+| F1-score     | 97.7%   |
+
+**Confusion Matrix:**
+
+|            | Actual 0 | Actual 1 |
+|------------|----------|----------|
+| **Pred 0** |   980    |    20    |
+| **Pred 1** |    25    |   975    |
+
