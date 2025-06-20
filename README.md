@@ -66,6 +66,21 @@ This project uses **two physical machines** connected on a private network.
 
 The dataset used in this project contains wildfire records with features such as:
 
+---
+
+### 🧠 Add Feature Description Table (Optional)
+
+```markdown
+| Feature       | Description                        |
+|---------------|------------------------------------|
+| latitude      | Fire latitude                      |
+| longitude     | Fire longitude                     |
+| brightness    | Brightness of the fire             |
+| scan          | Width of the scan footprint        |
+| track         | Length of the scan footprint       |
+| frp           | Fire Radiative Power               |
+| confidence    | Target (Low, Medium, High)         |
+
 - Latitude & Longitude
 - Brightness
 - Scan & Track
