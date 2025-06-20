@@ -19,3 +19,25 @@
 - 📁 [`Final_Distributed_ML_using_H2O Framework.ipynb`](./Final_Distributed_ML_using_H2O%20Framework.ipynb) — Complete code notebook  
 - 📁 [`📊 Project Report: Predictive Modeling using H2O.ai.pdf`](./📊%20Project%20Report_%20Predictive%20Modeling%20using%20H2O.ai.pdf) — Final report  
 - 📁 [`README.md`](./README.md) — You're here  
+---
+
+## ⚙️ How to Run the Project
+
+> Run this notebook locally using **Jupyter** or **VS Code** with required Python packages.
+
+### 1. Clone this repo
+```bash
+git clone https://github.com/kananpandit02/wildfire_pred_h2o.git
+cd wildfire_pred_h2o
+```
+### 2. Install dependencies
+```bash
+pip install h2o pandas numpy matplotlib
+```
+3. Launch notebook
+```bash
+jupyter notebook
+```
+Then open [**Final_Distributed_ML_using_H2O Framework.ipynb**](./Final_Distributed_ML_using_H2O%20Framework.ipynb) and run the cells step-by-step.
+
+
