@@ -1,4 +1,8 @@
 # 🔥 Distributed Wildfire Confidence Prediction using H2O.ai
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![H2O.ai](https://img.shields.io/badge/H2O.ai-distributed-yellow)
+![License: MIT](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/status-active-success)
 
 > A multiclass classification project leveraging a **2-node distributed H2O cluster** and **Random Forest** algorithm to predict wildfire confidence levels with high accuracy.
 
