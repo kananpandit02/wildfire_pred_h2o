@@ -80,7 +80,7 @@ The dataset used in this project contains wildfire records with features such as
 | track         | Length of the scan footprint       |
 | frp           | Fire Radiative Power               |
 | confidence    | Target (Low, Medium, High)         |
-
+```
 - Latitude & Longitude
 - Brightness
 - Scan & Track
