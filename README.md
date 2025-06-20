@@ -41,3 +41,16 @@ jupyter notebook
 Then open [**Final_Distributed_ML_using_H2O Framework.ipynb**](./Final_Distributed_ML_using_H2O%20Framework.ipynb) and run the cells step-by-step.
 
 
+---
+
+## 🌐 Distributed H2O Cluster Setup
+
+This project uses **two physical machines** connected on a private network.
+
+- H2O cluster is configured using `flatfile.txt`  
+- Each node runs `h2o.jar` with the same cluster name  
+- DRF model training is automatically parallelized across both machines
+
+📎 **View Full Cluster Setup Guide**:  
+🔗 [kananpandit02/h2o_cluster_setup](https://github.com/kananpandit02/h2o_cluster_setup)
+
