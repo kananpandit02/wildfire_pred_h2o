@@ -15,7 +15,7 @@
 ---
 
 ## 📂 Repository Structure
-📁 Final_Distributed_ML_using_H2O Framework.ipynb # Complete code notebook
-📁 📊 Project Report: Predictive Modeling using H2O.ai.pdf # Final report
-📁 README.md 
 
+- 📁 [`Final_Distributed_ML_using_H2O Framework.ipynb`](./Final_Distributed_ML_using_H2O%20Framework.ipynb) — Complete code notebook  
+- 📁 [`📊 Project Report: Predictive Modeling using H2O.ai.pdf`](./📊%20Project%20Report_%20Predictive%20Modeling%20using%20H2O.ai.pdf) — Final report  
+- 📁 [`README.md`](./README.md) — You're here  
