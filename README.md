@@ -66,5 +66,4 @@ On each machine, run the following command:
 java -Xmx4g -jar h2o.jar -name wildfire-cluster -flatfile flatfile.txt
 ```
 ## 📎 Full setup guide available at:
-🔗 kananpandit02/h2o_cluster_setup
-
+[kananpandit02/h2o_cluster_setup](https://github.com/kananpandit02/h2o_cluster_setup)` is now **clickable** in any Markdown viewer
