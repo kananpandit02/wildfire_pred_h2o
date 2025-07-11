@@ -147,14 +147,19 @@ Select the following options on the page:
 ## 📜 Data Citation & Disclaimer
 
 **Citation**:  
-NASA FIRMS Data Citation
+Cite this dataset as:  
+> NASA FIRMS. 2023. *VIIRS 375m Active Fire Data (Suomi NPP)*. NASA FIRMS, LANCE/EOSDIS, NASA.  
+> Available at: [https://earthdata.nasa.gov/earth-observation-data/near-real-time/citation](https://earthdata.nasa.gov/earth-observation-data/near-real-time/citation)
 
 **Disclaimer**:  
 The LANCE/FIRMS data is provided “as is” without warranty of any kind.  
-Users assume all responsibility for its use.  
-For more details, see the [FIRMS FAQ](https://firms.modaps.eosdis.nasa.gov/faq/).
+Users assume all responsibility and liability for the use of this data, including any resulting loss, damage, or misuse.  
+NASA and its data providers are not liable for any consequence of data use.
 
----
+For full terms and guidance, refer to:  
+- 🔗 [FIRMS FAQ](https://firms.modaps.eosdis.nasa.gov/faq/)  
+- 🔗 [NASA Data Use Policy](https://earthdata.nasa.gov/earth-observation-data/data-use-policy)
+
 
 ## ⚠️ License
 
