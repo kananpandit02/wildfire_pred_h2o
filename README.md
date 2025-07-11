@@ -110,3 +110,69 @@ Select the following options on the page:
 - **Year**: 2023  
 - **Region**: Global
 
+- 
+## 📈 Model Performance
+
+| Metric     | Value    |
+|------------|----------|
+| AUC        | 0.948    |
+| RMSE       | 0.135    |
+| Accuracy   | 97.75%   |
+| Precision  | 97.5%    |
+| Recall     | 98.0%    |
+| F1-score   | 97.7%    |
+
+---
+
+## 🔢 Confusion Matrix (Example Format)
+
+| Actual \ Pred | Low | Medium | High |
+|---------------|-----|--------|------|
+| **Low**       | 980 | 10     | 10   |
+| **Medium**    | 12  | 975    | 13   |
+| **High**      | 10  | 15     | 965  |
+
+---
+
+## 🧩 Future Work
+
+- Add satellite-specific **seasonal features**
+- Try **H2O AutoML**, **Deep Learning**, and **XGBoost**
+- Apply **Hyperparameter Tuning** via Grid Search
+- Deploy using **H2O REST API** or build a **Streamlit UI**
+- Add **SHAP** or other feature attribution **visualizations**
+
+
+
+## 📜 Data Citation & Disclaimer
+
+**Citation**:  
+NASA FIRMS Data Citation
+
+**Disclaimer**:  
+The LANCE/FIRMS data is provided “as is” without warranty of any kind.  
+Users assume all responsibility for its use.  
+For more details, see the [FIRMS FAQ](https://firms.modaps.eosdis.nasa.gov/faq/).
+
+---
+
+## ⚠️ License
+
+This project is intended for **academic use only** and is **not licensed for commercial or production deployment**.  
+**No license is granted.**  
+Please contact the authors for further usage rights.
+
+
+## 🌐 Connect With Us
+
+### 👨‍💻 Kanan Pandit  
+🌐 [Portfolio](https://kananpanditportfolio.netlify.app/)  
+✉️ kananpandit02@gmail.com  
+
+### 👨‍💻 Sudam Paul  
+🌐 [Portfolio](https://sudam23.github.io/My_Portfolio/)  
+✉️ 2002sudam@gmail.com  
+
+### 🏫 Institution  
+**Ramakrishna Mission Vivekananda Educational and Research Institute**  
+📍 *Belur Math, Howrah, West Bengal*
