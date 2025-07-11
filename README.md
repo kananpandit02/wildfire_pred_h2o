@@ -29,3 +29,15 @@ wildfire_pred_h2o/
 ├── flatfile.txt                                     # H2O node list for cluster
 ├── requirements.txt                                 # Python dependencies
 ├── README.md                                        # This file
+
+## ⚙️ How to Run the Project
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/kananpandit02/wildfire_pred_h2o.git  
+cd wildfire_pred_h2o
+```
+
+
+
