@@ -58,6 +58,11 @@ This project bridges the gap between environmental data availability and real-ti
 
 ---
 
+
+## 📍 Course Project | Ramakrishna Mission Vivekananda Educational and Research Institute, Belur Math  
+🧠 Team: Tom and Jerry  
+👨‍💻 Members: Kanan Pandit , Sudam Paul  
+📅 Date: April 26, 2025
 ## 📂 Repository Structure
 
 ```plaintext
@@ -206,12 +211,38 @@ For full terms and guidance, refer to:
 - 🔗 [NASA Data Use Policy](https://earthdata.nasa.gov/earth-observation-data/data-use-policy)
 
 
+
+### 🙏 Acknowledgements
+
+Special thanks to:
+
+**Champak Kumar Dutta**  
+Assistant Professor, Department of Data Science  
+RKMVERI, Belur Math, West Bengal  
+
+For his guidance, mentorship, and continuous encouragement.
 ## ⚠️ License
 
 This project is intended for **academic use only** and is **not licensed for commercial or production deployment**.  
 **No license is granted.**  
 Please contact the authors for further usage rights.
 
+---
+
+## 🧾 Concluding Remarks
+
+This project demonstrates how distributed machine learning can be effectively applied to real-world environmental challenges like wildfire detection. By combining high-resolution satellite data from NASA FIRMS with H2O.ai’s scalable distributed computing framework, we achieved robust wildfire confidence prediction across global datasets.
+
+Key highlights include:
+- Successful deployment of a 2-node H2O cluster
+- High accuracy (97.75%) using a Distributed Random Forest model
+- Full pipeline from data ingestion to evaluation
+
+This solution can serve as a baseline for building more advanced, real-time wildfire monitoring systems that can support global climate resilience and disaster management efforts.
+
+The methodology, tools, and open datasets used in this project make it not only effective but also reproducible and adaptable for further research, extension, or production use in academic and government settings.
+
+---
 
 ## 🌐 Connect With Us
 
