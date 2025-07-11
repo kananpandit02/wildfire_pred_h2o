@@ -65,5 +65,48 @@ On each machine, run the following command:
 
 java -Xmx4g -jar h2o.jar -name wildfire-cluster -flatfile flatfile.txt
 ```
-## 📎 Full Cluster setup guide available at:
+## 📎 Full Cluster Setup Guide Available At:
 [kananpandit02/h2o_cluster_setup](https://github.com/kananpandit02/h2o_cluster_setup)
+
+## 📦 Dataset
+
+This project uses **NASA VIIRS SNPP Active Fire/Hotspot Data (375m, NRT)** for the year **2023**, covering **all countries**.
+
+- **Source**: NASA FIRMS  
+- **Satellite**: SNPP (Suomi NPP)  
+- **Projection**: WGS84 (Latitude/Longitude)  
+- **Format**: CSV  
+- **Time Period**: Jan 2023 – Dec 2023  
+- **Resolution**: 375 meters  
+
+---
+
+## 🔍 Feature Summary
+
+| Feature     | Description                                |
+|-------------|--------------------------------------------|
+| `latitude`  | Fire latitude (WGS84)                      |
+| `longitude` | Fire longitude (WGS84)                     |
+| `brightness`| Brightness of fire detection               |
+| `scan`      | Width of the scan footprint                |
+| `track`     | Length of the scan footprint               |
+| `acq_date`  | Date of fire detection                     |
+| `acq_time`  | Time of fire detection (UTC)               |
+| `satellite` | SNPP satellite ID                          |
+| `confidence`| Confidence level (Low, Nominal, High)      |
+| `frp`       | Fire Radiative Power (MW)                  |
+| `daynight`  | Day or Night detection                     |
+| `version`   | Collection version info                    |
+
+---
+
+⚠️ **Dataset not included in this repository.**
+
+📥 **Download from**:  
+👉 [https://firms.modaps.eosdis.nasa.gov/download/](https://firms.modaps.eosdis.nasa.gov/download/)
+
+Select the following options on the page:
+- **Product**: VIIRS SNPP 375m  
+- **Year**: 2023  
+- **Region**: Global
+
