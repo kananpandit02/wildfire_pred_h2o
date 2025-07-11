@@ -39,6 +39,14 @@ wildfire_pred_h2o/
 git clone https://github.com/kananpandit02/wildfire_pred_h2o.git  
 cd wildfire_pred_h2o
 ```
-
+### 2. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+### 3. Launch the Notebook
+```bash
+jupyter notebook
+```
+Then open Final_Distributed_ML_using_H2O_Framework.ipynb and run the cells step-by-step.
 
 
