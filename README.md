@@ -20,6 +20,44 @@
 
 ---
 
+
+---
+
+## 🧾 Overview
+
+This project presents a scalable, distributed machine learning solution to predict wildfire confidence levels using satellite data. By leveraging the power of a **2-node H2O.ai distributed cluster**, it processes **2023 global VIIRS SNPP Active Fire data** to classify each fire event into **Low**, **Nominal**, or **High** confidence categories.
+
+The project includes:
+- Distributed model training using H2O’s DRF algorithm
+- End-to-end pipeline: preprocessing, training, evaluation
+- Real-world application on global fire datasets from NASA FIRMS
+
+---
+
+## 🎯 Objective
+
+The primary objective of this project is to:
+- Build a **high-accuracy wildfire classification system**
+- Utilize **distributed computing** to handle large-scale satellite data
+- Deploy a **Distributed Random Forest (DRF)** model via H2O.ai
+- Evaluate performance using real metrics like **AUC, Accuracy, F1-score**
+- Enable analysis across all countries using 2023 fire records
+
+---
+
+## 🔥 Motivation
+
+With climate change accelerating wildfire incidents worldwide, early detection and classification of fires are critical for emergency response, planning, and resource management. Satellite data, especially from **NASA's VIIRS SNPP**, provides near real-time coverage of global fire events.
+
+However, processing such large datasets requires scalable tools. This motivated the use of:
+- **Distributed H2O.ai framework** for handling computation across machines
+- **Machine learning** to automate fire classification
+- **Open global datasets** for transparency and reproducibility
+
+This project bridges the gap between environmental data availability and real-time decision-making by creating a system that’s fast, scalable, and accurate.
+
+---
+
 ## 📂 Repository Structure
 
 ```plaintext
