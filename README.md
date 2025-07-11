@@ -48,5 +48,23 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 Then open Final_Distributed_ML_using_H2O_Framework.ipynb and run the cells step-by-step.
+### 🌐 Distributed H2O Cluster Setup
+This project utilizes two physical machines on a private network to build a distributed H2O cluster.
 
+## ⚙️ Setup Steps:
+Ensure both machines are connected to the same network.
+
+Create a flatfile.txt that lists the IP addresses of each node, e.g.:
+```bash
+
+192.168.0.101
+192.168.0.102
+```
+On each machine, run the following command:
+```bash
+
+java -Xmx4g -jar h2o.jar -name wildfire-cluster -flatfile flatfile.txt
+```
+## 📎 Full setup guide available at:
+🔗 kananpandit02/h2o_cluster_setup
 
