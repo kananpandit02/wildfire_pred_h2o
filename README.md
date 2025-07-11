@@ -70,18 +70,27 @@ java -Xmx4g -jar h2o.jar -name wildfire-cluster -flatfile flatfile.txt
 
 ## 📦 Dataset
 
-This project uses **NASA VIIRS SNPP Active Fire/Hotspot Data (375m, NRT)** for the year **2023**, covering **all countries**.
+This project uses **NASA VIIRS SNPP Active Fire/Hotspot Data (375m, Near Real-Time)** for the **entire year of 2023**, covering **all countries worldwide**.
 
-- **Source**: NASA FIRMS  
-- **Satellite**: SNPP (Suomi NPP)  
-- **Projection**: WGS84 (Latitude/Longitude)  
-- **Format**: CSV  
-- **Time Period**: Jan 2023 – Dec 2023  
+### 🔗 Official Data Sources
+
+- 🌍 **Global Fire Data Download**: [https://firms.modaps.eosdis.nasa.gov/download/](https://firms.modaps.eosdis.nasa.gov/download/)  
+- 🌐 **Country-wise Fire Data Viewer**: [https://firms.modaps.eosdis.nasa.gov/country/](https://firms.modaps.eosdis.nasa.gov/country/)
+
+This dataset includes active fire points detected globally by the **Suomi National Polar-orbiting Partnership (SNPP)** satellite using the **VIIRS sensor at 375m resolution**.
+
+### 📄 Data Overview
+
+- **Satellite**: VIIRS SNPP  
+- **Temporal Coverage**: January 1 – December 31, 2023  
+- **Spatial Coverage**: 🌍 All countries (global)  
 - **Resolution**: 375 meters  
+- **Projection**: WGS84 (latitude/longitude)  
+- **Format**: CSV (also available as KML, SHP via FIRMS)
 
 ---
 
-## 🔍 Feature Summary
+### 🔍 Feature Summary
 
 | Feature     | Description                                |
 |-------------|--------------------------------------------|
@@ -98,19 +107,17 @@ This project uses **NASA VIIRS SNPP Active Fire/Hotspot Data (375m, NRT)** for t
 | `daynight`  | Day or Night detection                     |
 | `version`   | Collection version info                    |
 
----
+> ⚠️ **Dataset is not included in this repository** due to size constraints.
 
-⚠️ **Dataset not included in this repository.**
+📥 **To use the same dataset**:
+- Go to: [https://firms.modaps.eosdis.nasa.gov/download/](https://firms.modaps.eosdis.nasa.gov/download/)
+- Select:
+  - **Sensor**: VIIRS SNPP 375m  
+  - **Region**: Global  
+  - **Date Range**: 01 Jan 2023 to 31 Dec 2023  
+  - Format: CSV
 
-📥 **Download from**:  
-👉 [https://firms.modaps.eosdis.nasa.gov/download/](https://firms.modaps.eosdis.nasa.gov/download/)
 
-Select the following options on the page:
-- **Product**: VIIRS SNPP 375m  
-- **Year**: 2023  
-- **Region**: Global
-
-- 
 ## 📈 Model Performance
 
 | Metric     | Value    |
