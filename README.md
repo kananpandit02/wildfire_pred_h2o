@@ -30,6 +30,7 @@ wildfire_pred_h2o/
 ├── requirements.txt                                 # Python dependencies
 ├── README.md                                        # This file
 
+```
 ## ⚙️ How to Run the Project
 
 ### 1. Clone the Repository
