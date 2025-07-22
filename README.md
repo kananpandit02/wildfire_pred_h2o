@@ -16,8 +16,13 @@
 - 🌲 Trained a **Distributed Random Forest (DRF)** for **multiclass classification**  
 - 📈 Achieved **97.75% accuracy**, AUC of **0.948**  
 - 🧪 Includes full **data preprocessing, training, evaluation, and export**  
-- 📚 Linked with a detailed PDF **project report** and **cluster setup guide**  
-
+- 📚 Linked with a detailed PDF **project report** and **cluster setup guide** 
+The primary objective of this project is to:
+- Build a **high-accuracy wildfire classification system**
+- Utilize **distributed computing** to handle large-scale satellite data
+- Deploy a **Distributed Random Forest (DRF)** model via H2O.ai
+- Evaluate performance using real metrics like **AUC, Accuracy, F1-score**
+- Enable analysis across all countries using 2023 fire records
 ---
 
 
@@ -193,6 +198,7 @@ java -Xmx4g -jar h2o.jar -name wildfire-cluster -flatfile flatfile.txt
 | Precision  | 97.5%    |
 | Recall     | 98.0%    |
 | F1-score   | 97.7%    |
+| LogLoss    | 0.0961   |
 
 ---
 
