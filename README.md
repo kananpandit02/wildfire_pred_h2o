@@ -74,6 +74,73 @@ wildfire_pred_h2o/
 ├── README.md                                        # This file
 
 ```
+
+## 📦 Dataset
+
+This project uses **NASA VIIRS SNPP Active Fire/Hotspot Data (375m, Near Real-Time)** for the **entire year of 2023**, covering **all countries worldwide**.
+
+### 🔗 Official Data Sources
+
+- 🌍 **Global Fire Data Download**: [https://firms.modaps.eosdis.nasa.gov/download/](https://firms.modaps.eosdis.nasa.gov/download/)  
+- 🌐 **Country-wise Fire Data Viewer**: [https://firms.modaps.eosdis.nasa.gov/country/](https://firms.modaps.eosdis.nasa.gov/country/)
+
+This dataset includes active fire points detected globally by the **Suomi National Polar-orbiting Partnership (SNPP)** satellite using the **VIIRS sensor at 375m resolution**.
+
+### 📄 Data Overview
+
+- **Satellite**: VIIRS SNPP  
+- **Temporal Coverage**: January 1 – December 31, 2023  
+- **Spatial Coverage**: 🌍 All countries (global)  
+- **Resolution**: 375 meters  
+- **Projection**: WGS84 (latitude/longitude)  
+- **Format**: CSV (also available as KML, SHP via FIRMS)
+
+---
+## 📎 Full Cluster Setup Guide Available At:
+[kananpandit02/h2o_cluster_setup](https://github.com/kananpandit02/h2o_cluster_setup)
+
+
+### 🔍 Feature Summary
+
+| Feature     | Description                                |
+|-------------|--------------------------------------------|
+| `latitude`  | Fire latitude (WGS84)                      |
+| `longitude` | Fire longitude (WGS84)                     |
+| `brightness`| Brightness of fire detection               |
+| `scan`      | Width of the scan footprint                |
+| `track`     | Length of the scan footprint               |
+| `acq_date`  | Date of fire detection                     |
+| `acq_time`  | Time of fire detection (UTC)               |
+| `satellite` | SNPP satellite ID                          |
+| `confidence`| Confidence level (Low, Nominal, High)      |
+| `frp`       | Fire Radiative Power (MW)                  |
+| `daynight`  | Day or Night detection                     |
+| `version`   | Collection version info                    |
+
+> ⚠️ **Dataset is not included in this repository** due to size constraints.
+
+📥 **To use the same dataset**:
+- Go to: [https://firms.modaps.eosdis.nasa.gov/download/](https://firms.modaps.eosdis.nasa.gov/download/)
+- Select:
+  - **Sensor**: VIIRS SNPP 375m  
+  - **Region**: Global  
+  - **Date Range**: 01 Jan 2023 to 31 Dec 2023  
+  - Format: CSV
+
+
+## 🛠️ Dataset Preparation
+
+All raw `.csv` files from different countries were merged into a single unified dataset for training:
+
+- **Script Used:** `csv_merge.py`
+- **Output File:** `Wildfire_prediction.csv`
+
+To merge:
+```bash
+python dataset_preparation/csv_merge.py
+```
+
+---
 ## ⚙️ How to Run the Project
 
 ### 1. Clone the Repository
@@ -111,54 +178,7 @@ java -Xmx4g -jar h2o.jar -name wildfire-cluster -flatfile flatfile.txt
 ## 📎 Full Cluster Setup Guide Available At:
 [kananpandit02/h2o_cluster_setup](https://github.com/kananpandit02/h2o_cluster_setup)
 
-## 📦 Dataset
 
-This project uses **NASA VIIRS SNPP Active Fire/Hotspot Data (375m, Near Real-Time)** for the **entire year of 2023**, covering **all countries worldwide**.
-
-### 🔗 Official Data Sources
-
-- 🌍 **Global Fire Data Download**: [https://firms.modaps.eosdis.nasa.gov/download/](https://firms.modaps.eosdis.nasa.gov/download/)  
-- 🌐 **Country-wise Fire Data Viewer**: [https://firms.modaps.eosdis.nasa.gov/country/](https://firms.modaps.eosdis.nasa.gov/country/)
-
-This dataset includes active fire points detected globally by the **Suomi National Polar-orbiting Partnership (SNPP)** satellite using the **VIIRS sensor at 375m resolution**.
-
-### 📄 Data Overview
-
-- **Satellite**: VIIRS SNPP  
-- **Temporal Coverage**: January 1 – December 31, 2023  
-- **Spatial Coverage**: 🌍 All countries (global)  
-- **Resolution**: 375 meters  
-- **Projection**: WGS84 (latitude/longitude)  
-- **Format**: CSV (also available as KML, SHP via FIRMS)
-
----
-
-### 🔍 Feature Summary
-
-| Feature     | Description                                |
-|-------------|--------------------------------------------|
-| `latitude`  | Fire latitude (WGS84)                      |
-| `longitude` | Fire longitude (WGS84)                     |
-| `brightness`| Brightness of fire detection               |
-| `scan`      | Width of the scan footprint                |
-| `track`     | Length of the scan footprint               |
-| `acq_date`  | Date of fire detection                     |
-| `acq_time`  | Time of fire detection (UTC)               |
-| `satellite` | SNPP satellite ID                          |
-| `confidence`| Confidence level (Low, Nominal, High)      |
-| `frp`       | Fire Radiative Power (MW)                  |
-| `daynight`  | Day or Night detection                     |
-| `version`   | Collection version info                    |
-
-> ⚠️ **Dataset is not included in this repository** due to size constraints.
-
-📥 **To use the same dataset**:
-- Go to: [https://firms.modaps.eosdis.nasa.gov/download/](https://firms.modaps.eosdis.nasa.gov/download/)
-- Select:
-  - **Sensor**: VIIRS SNPP 375m  
-  - **Region**: Global  
-  - **Date Range**: 01 Jan 2023 to 31 Dec 2023  
-  - Format: CSV
 
 
 ## 📈 Model Performance
