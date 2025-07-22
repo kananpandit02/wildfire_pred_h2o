@@ -128,6 +128,8 @@ This dataset includes active fire points detected globally by the **Suomi Nation
   - Format: CSV
 
 
+---
+
 ## 🛠️ Dataset Preparation
 
 All raw `.csv` files from different countries were merged into a single unified dataset for training:
