@@ -187,28 +187,16 @@ java -Xmx4g -jar h2o.jar -name wildfire-cluster -flatfile flatfile.txt
 
 
 
+#### 📈 Model Performance: 
 
-## 📈 Model Performance
+| Metric                | Value    |
+|-----------------------|----------|
+| RMSE                  | 0.1721   |
+| MSE                   | 0.02964  |
+| Mean Per Class Error  | 0.070    |
+| LogLoss               | 0.0961   |
 
-| Metric     | Value    |
-|------------|----------|
-| AUC        | 0.948    |
-| RMSE       | 0.135    |
-| Accuracy   | 97.75%   |
-| Precision  | 97.5%    |
-| Recall     | 98.0%    |
-| F1-score   | 97.7%    |
-| LogLoss    | 0.0961   |
 
----
-
-## 🔢 Confusion Matrix (Example Format)
-
-| Actual \ Pred | Low | Medium | High |
-|---------------|-----|--------|------|
-| **Low**       | 980 | 10     | 10   |
-| **Medium**    | 12  | 975    | 13   |
-| **High**      | 10  | 15     | 965  |
 
 ---
 
