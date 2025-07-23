@@ -68,7 +68,8 @@ wildfire_pred_h2o/
 ├── Final_Distributed_ML_using_H2O Framework.ipynb   # Main notebook
 ├── 📊 Project Report: Predictive Modeling using H2O.ai.pdf  # Final report
 ├── flatfile.txt                                     # H2O node list for cluster
-├── requirements.txt                                 # Python dependencies
+├── requirements.txt                                  # Python dependencies
+├── csv_merge.py                                # for merging multiple csv
 ├── README.md                                        # This file
 
 ```
@@ -179,7 +180,86 @@ java -Xmx4g -jar h2o.jar -name wildfire-cluster -flatfile flatfile.txt
 [kananpandit02/h2o_cluster_setup](https://github.com/kananpandit02/h2o_cluster_setup)
 
 
+## 🤖 AutoML Pipeline
 
+- **Platform:** H2O AutoML (multi-node)
+- **Notebook:** `Final_Distributed_ML_using_H2O Framework.ipynb`
+- **Tasks Covered:**
+  - Cluster initialization
+  - Data import and exploration
+  - Automatic training of multiple models
+  - Leaderboard evaluation
+  - Model interpretation
+  - Final prediction
+
+📄 Additional explanation is provided in `AutoML.txt`.
+
+---
+
+## 📘 Notebook Overview – `Final_Distributed_ML_using_H2O Framework.ipynb`
+
+This notebook demonstrates a complete, distributed machine learning workflow using the H2O framework.
+
+### 🔹 Steps Covered:
+
+1. **Environment Setup**
+   - Warnings suppressed, visualization style set.
+   - H2O cluster initialized using `h2o.init(ip="172.20.252.53", port=54323)`.
+
+2. **Data Loading**
+   - Data loaded from:
+     ```python
+     h2o.upload_file("Wildfire_prediction.csv")
+     ```
+
+3. **Exploratory Data Analysis**
+   - Sample records, data schema, null checks, summary stats.
+
+4. **Feature Engineering**
+   - Column conversion, data cleaning.
+   - Train/validation/test split:
+     ```python
+     train, valid, test = data.split_frame(ratios=[0.7, 0.15], seed=1234)
+     ```
+
+5. **AutoML Training**
+   - Automatically trains models using:
+     ```python
+     from h2o.automl import H2OAutoML
+     aml = H2OAutoML(max_models=10, seed=1, max_runtime_secs=600)
+     aml.train(y="target_column", training_frame=train, validation_frame=valid)
+     ```
+
+6. **Model Leaderboard**
+   - AutoML leaderboard includes GBM, XGBoost, DRF, GLM, and Ensembles.
+
+7. **Evaluation**
+   - Leader model is evaluated on test set.
+   - Metrics and visualizations include AUC, LogLoss, variable importance.
+
+8. **Prediction and Export**
+   - Final predictions saved as:
+     ```python
+     preds = aml.leader.predict(test)
+     preds.as_data_frame().to_csv("wildfire_predictions.csv")
+     ```
+
+---
+
+### 🌲 Manual Random Forest Model (Outside AutoML)
+
+In addition to AutoML, the notebook also trains a standalone **Random Forest Classifier** using `H2ORandomForestEstimator` for predicting wildfire confidence levels.
+
+#### Model Details:
+- **Target Variable:** `confidence` (converted to categorical)
+- **Features:** All columns except `confidence`
+- **Model Parameters:**
+  ```python
+  rf_model = H2ORandomForestEstimator(ntrees=30, max_depth=20, seed=1234)
+  rf_model.train(x=x, y=y, training_frame=train, validation_frame=valid)
+  ```
+
+The model is trained and summarized to compare.
 #### 📈 Model Performance: 
 
 | Metric                | Value    |
@@ -190,16 +270,25 @@ java -Xmx4g -jar h2o.jar -name wildfire-cluster -flatfile flatfile.txt
 | LogLoss               | 0.0961   |
 
 
-
 ---
 
-## 🧩 Future Work
+## 📈 Output Highlights
 
-- Add satellite-specific **seasonal features**
-- Try **H2O AutoML**, **Deep Learning**, and **XGBoost**
-- Apply **Hyperparameter Tuning** via Grid Search
-- Deploy using **H2O REST API** or build a **Streamlit UI**
-- Add **SHAP** or other feature attribution **visualizations**
+- Models Trained:
+  - GBM, DRF, XGBoost, GLM, Deep Learning, Stacked Ensembles
+  - Manual Random Forest
+- Evaluation Metrics:
+  - MSE, RMSE, LogLoss, Variable Importance
+- Output:
+  - In Progress............
+
+
+---
+## 🖥️ Sample Visualization
+> Screenshots of the H2O cluster setup and Output of ML models.
+![Screenshot](Setup1.png)
+![Screenshot](Setup2.png)
+
 
 
 
@@ -244,8 +333,12 @@ This project demonstrates how distributed machine learning can be effectively ap
 
 Key highlights include:
 - Successful deployment of a 2-node H2O cluster
-- High accuracy (97.75%) using a Distributed Random Forest model
+- High accuracy using a Distributed Random Forest model
 - Full pipeline from data ingestion to evaluation
+- End-to-end wildfire prediction pipeline using distributed ML.
+- Manual model comparison using Random Forest.
+- Understanding of H2O AutoML in real-world settings.
+- Hands-on experience with H2O cluster setup and orchestration.
 
 This solution can serve as a baseline for building more advanced, real-time wildfire monitoring systems that can support global climate resilience and disaster management efforts.
 
