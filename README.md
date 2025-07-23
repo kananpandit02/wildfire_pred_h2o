@@ -71,6 +71,9 @@ wildfire_pred_h2o/
 ├── requirements.txt                                  # Python dependencies
 ├── csv_merge.py                                # for merging multiple csv
 ├── README.md                                        # This file
+├──AutoML.txt
+├──Setup1.png
+├── Setup2.png
 
 ```
 
