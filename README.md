@@ -137,7 +137,7 @@ All raw `.csv` files from different countries were merged into a single unified 
 
 To merge:
 ```bash
-python dataset_preparation/csv_merge.py
+csv_merge.py
 ```
 
 ---
