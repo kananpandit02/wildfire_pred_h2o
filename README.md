@@ -10,13 +10,6 @@
 ---
 
 ## 📌 Highlights
-
-- 🌍 Used **2023 VIIRS SNPP global wildfire data** from NASA FIRMS  
-- 🖥️ Deployed a **2-node H2O cluster** for distributed model training  
-- 🌲 Trained a **Distributed Random Forest (DRF)** for **multiclass classification**  
-- 📈 Achieved **97.75% accuracy**, AUC of **0.948**  
-- 🧪 Includes full **data preprocessing, training, evaluation, and export**  
-- 📚 Linked with a detailed PDF **project report** and **cluster setup guide** 
 The primary objective of this project is to:
 - Build a **high-accuracy wildfire classification system**
 - Utilize **distributed computing** to handle large-scale satellite data
